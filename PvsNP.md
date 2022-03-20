@@ -1,4 +1,4 @@
-# Understanding P vs NP
+# Understanding P vs NP, and NP-completeness
 
 ### Introduction
 P vs NP concerns the question of how an algorithm used on a problem (P, polynomial time) that can find a solution, relates in some way to problems that, while hard for an algorithm to find an answer in P-time, can be quickly checked (NP, nondeterministic polynomial time)
@@ -30,8 +30,14 @@ Common thought: P =/= NP
 
 can you set the variables (satisfying assignment) x_1, x_2, ... --> {T, F} such that formula = T
 
-ENP: guess x_1 = T or F, x_2 = T or F, ... check formula -> T : return YES, F: return NO
+in NP: guess x_1 = T or F, x_2 = T or F, ... check formula -> T : return YES, F: return NO
 
--guesses up front and checking later, this can be a verification algorithm
--explanation: gives you guesses x_i, you can quickly check each assignment.
+-guesses up front and checking later, this can be a verification algorithm. <br />
+-explanation: gives you guesses x_i, you can quickly check each assignment. <br />
+-1970's Cooke, proved 3SAT is NP complete, could reduce any NP prob to 3SAT
 
+###### How to prove X is NP-complete
+1. X in NP<br />
+    -nondeterminisitc algorithm<br />
+    -certificate + verifier<br />
+2. reduce from known NP-complete problem Y to X<br />
