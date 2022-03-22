@@ -1,8 +1,14 @@
 # CS-notes
-Sources: 
-1. https://www.computerscience.org/resources/computer-programming-languages/#python
+
+## Topics
+
+#### P vs NP
+
+#### Divide And Conquer
 
 ## Languages Overview
+Sources: 
+1. https://www.computerscience.org/resources/computer-programming-languages/#python
 
 ### Python
 -interpreted, OO, efficient semantics
