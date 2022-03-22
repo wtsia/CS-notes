@@ -39,4 +39,21 @@ Application portability
 Robust and interpreted language
 Extensive network library
 
-###
+### Ruby/Ruby on Rails
+Ruby is an open-sourced, object-oriented scripting language that can be used independently or as part of the Ruby on Rails web framework.
+
+Who uses it?
+Professions and Industries:
+Ruby on Rails developers, software engineers, data science engineers
+Used by employers in technology, engineering, professional services, design, science and quality control
+Major Organizations: Github, Scribd, Groupon, NASA Langley Research Center, Blue Sequence (part of Toyota Motor Manufacturing), Motorola, Google (SketchUp)
+Specializations and Industries: Web App Development, Robotics, Networking, System Administration and Security
+What makes learning it important?
+Ruby is used for simulations, 3D modeling, and to manage and track information.
+
+Basecamp, Amazon, Twitter and Groupon were all created using Ruby on Rails.
+NASA uses Ruby to conduct simulations.
+Features:
+Free to use, copy, modify and distribute
+Intuitive and flexible language
+Completely object-oriented (ability to use method chaining)
