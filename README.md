@@ -2,9 +2,9 @@
 
 ## Topics
 
-#### P vs NP
+#### [P vs NP](PvsNP.md)
 
-#### Divide And Conquer
+#### [Divide And Conquer](DivideAndConquer.md)
 
 ## Languages Overview
 Sources: 
