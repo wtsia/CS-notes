@@ -6,9 +6,17 @@
 
 #### [Divide And Conquer](DivideAndConquer.md)
 
+## Other Topics
+
+### Math 
+
+### Economics
+
+#### [Nash Equilibrium](otherTopics/economics/Nash-Equilibrium.md)
+
 ## Languages Overview
-Sources: 
-1. https://www.computerscience.org/resources/computer-programming-languages/#python
+
+[SOURCE](https://www.computerscience.org/resources/computer-programming-languages/#python)
 
 ### Python
 An Interpreted, Object-Oriented language with efficient semantics
