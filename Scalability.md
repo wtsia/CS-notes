@@ -59,4 +59,22 @@ denormalize from the beginning and include no Joins in any db query. Use MySQL a
 -Redis: has extra db features like persistence, built-in data structures i.e. sets and lists
 Memacached: if only caching, and scales easily
 
-#### 
+## Asynchronism
+-imagine buying bread and being told to wait for 2 hours before it's ready--asynch avoids this
+
+### Paradigms of Asynchronism:
+#### Async #1
+-doing time consuming work in advance and serving the finished work at low request time
+-dynamic --> static
+-pages of a website built by a framework of CMS, are rendered and stored locally as static HTML w/ each change
+-Often these computing tasks are done on a regular basis, possibly by a script called /hr by cronjob. 
+-pre-computing makes websites and apps performant and scalable
+-imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network!
+
+#### Async #2
+What if there is something that can't be pre-loaded, or a query that is custom?
+
+-front end sends signal for a job, backend signal back it is being worked on, and front end tells a user to continue browsing while querying the back if the job is done. When the job completes, it is sent back up the chain and the user is notified.
+-reccom: first 3 tutorials on RabbitMQ, one of many systems which help to implement async processing. ActiveMQ or Redis lsit. 
+-Have a queue of tasks for worksers
+-time consuming? do it asynchronously
