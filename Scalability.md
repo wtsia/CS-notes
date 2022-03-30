@@ -5,6 +5,48 @@ Qualities to look for in a hosting website: SFTP, caution of 'unlimited' offers
 
 VPS: Virtual Private Server (Like AWS), A virtual private server is a virtual machine sold as a service by an Internet hosting service
 
+### Vertical Scaling: 
+Running low on ram, increase processing and throw resources at the problem
+    - shortcoming: real world constraints
+
+- CPU - Cores --> Threads, etc..
+
+- More resources means chopping servers into smaller VPS'
+
+-SAS: drives spin at over 7200 RPM at 15000 (2012), stores in bits
+
+-SSD: electronic storage
+
+### Horizontal Scaling:
+Running on many, slower machines instead of one fast machine
+    - 
+
+#### Load Balancing:
+- distributes traffic from clients among servers
+- What IP address should we return when a clien enters a website address
+    - can return via the load balancer instead of DNS returning server #
+- Private IPs are localized and not seen by the public 
+
+- How does a load balancer decide what data to get from the backend servers?
+    - can make dedicated headed servers or scale to identical codebases across servers
+    - How do we determine which server has unused processing power?
+        - use a DNS that does a 'Round Robin'
+            - problem with RR: can send heavy load users to the same servers by bad luck
+- BIND: Berkley Internet Name Daemon
+    - www. in a 64.131.79.131....132...
+
+- Caching issues: powerusers can still put heavy load on a single server
+
+- How to solve the problem: Sessions typically implemented per server, you can't use RR, cant use true load balancing
+    - i.e. user Alice being able to keep sessions in server 1 over and over to be usefu;
+- What if you turn the load balancer into a server that stores sessions? Well what if it dies? What are the redundancies?
+    - Instead, we can use RAID, Redundant Array of Independent Disks
+        - 
+
+
+
+
+
 Shared Web-Host:
 VPS: Virtual Private Servers
 -Takes
