@@ -16,3 +16,47 @@ VPS: Virtual Private Servers
 -when codebases are uniform, you can create an image (Amazon Machine Image for AWS) as a 'super clone' from which to draw from
 
 ## Database
+-Even with horizontal scaling, MySQL leads to slower performance and eventual breakdown.
+
+There are two paths to solving this issue:
+
+#### Path 1:
+Stick to MySQL, hire a databse admin (DBA), do master-slave replication (slave -> master) and add RAM to master server.
+
+DBA will use terms like 'sharding', 'denormalization', and 'SQL tuning'. 
+
+#### Path 2:
+denormalize from the beginning and include no Joins in any db query. Use MySQL as NoSQL if staying, or switch to an easier NoSQL i.e. MongoDB, CouchDB. Joins in app code (sooner the better). Even so, db requests will again be slower and slower and need a cache.
+
+## Cache
+-Cache means in=memory caches like Memcached or Redis. Never do file-based caching, as it makes cloning and auto-scaling of servers a pain
+
+-is a simple key-value store and should reside as a buffering layer between app and data storage 
+
+-1st app should retrieve from cache, only then from the data source, since CACHE is fast and holds every dataset in RAM. 
+
+2 data caching patterns:
+#### Cached Dataase Queries
+-most common
+-query db, store result dataset in cache
+-hashed ver. of query is cache key
+-issues: expiration, it is hard to delete cache if it is a complex query, and changing one table cell would require deleting all cached queries including that table cell
+
+#### Cached Objects
+-preferable pattern
+-let class assemble dataset from db and store complete instance in cache
+
+-Product
+    -data
+        -prices, texts, pictures, reviews
+        -filled by several methods doing several req that are harder to cache
+
+-once class is ifnished assembling the data array, store the array or the complete instance of the class, in the cache. 
+-allows you to get rid of the object whenever something did change
+-**allows asynch processing** possible. 
+-objects to cache: user sessions (never in db), fully rendered blog articles, activity streams, user <-> friend relationships
+-Two ways to cache via Redis and Memcached.
+-Redis: has extra db features like persistence, built-in data structures i.e. sets and lists
+Memacached: if only caching, and scales easily
+
+#### 
