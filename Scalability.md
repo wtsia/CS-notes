@@ -3,6 +3,8 @@
 
 Qualities to look for in a hosting website: SFTP, caution of 'unlimited' offers
 
+VPS: Virtual Private Server (Like AWS), A virtual private server is a virtual machine sold as a service by an Internet hosting service
+
 Shared Web-Host:
 VPS: Virtual Private Servers
 -Takes
