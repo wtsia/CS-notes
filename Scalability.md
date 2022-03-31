@@ -76,7 +76,49 @@ Caching:
             - better performance over disk space
 
 - MySQL Query Cache
-    - 
+- Memcached - memory cached
+    - stores in RAM
+    -What if you ran out of space on Memcached? What could you do?
+        - Garbage collection
+
+- MySQL offers Replication features
+    - Master-slave, connected via network and get copies of every row in master db.
+        - pro: can equally balance read load
+        - con: if one dies, 
+    - Master-Master
+        - pro: can implement redundancies yourself
+
+- Multi-tiered architecture
+    - can have Load Balancer (LB) to Web servers to LB to MySQL slaves, where master sends to slaves
+    - multiple LBs, can send packets between LBs and if one goes down, takes control of incoming packets, or passive takes over active LB.
+
+### Building a Network
+- want property of sticky sessions
+- to ensure saving the session, have the LB insert a cookie that allows it to remember the user is in server 1
+- stick db on web server itself
+- persistent actions arent saved in other servers unless LB sends the user to the same server
+- in this example, LB needs to be done in code
+- would be done with switches, so have 2 switches
+- power goes out? 
+- cloud computing: outsourcing security and db storage to a 'cloud' (ECA.. B.. C... elastic compute cloud)
+- multiple data centers
+- can do geography based LB, where req can be done at the DNS level
+
+Datacenter 1:
+2 LB --> 2 Web Servers --> another 2 LB --> 2 master databases, 2 switches
+
+Datacenter 2:
+2 LB --> 2 Web Servers --> another 2 LB --> 2 master databases, 2 switches
+
+### Security
+- Traffic: 
+    - incoming users: want firewall that allows TCP 80, 443 (for SSL, http based URLs) connections
+    - Offload SSL to LB or a special device and keep everything else encrypted
+    - LB --> web server, TCP 80
+    - LB --> DB, TCP 3306
+        - why separate encryptions? You should have **principle of least privledge**, so people cannot query db directly.
+        
+Summary: As soon as you have too many users, new problems arise
 
 
 # Scalability for Dummies: Notes
