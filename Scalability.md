@@ -63,6 +63,21 @@ Load Balancers:
 - Hardware
     - Barracude, Cisco, Citrix, F5, ...
 
+- PHP: get a bad wrap for performance since its not a compiling language like C++. However:
+    - PHP Accelerator: allows keeping PHP op-codes so compiled results dont get thrown away
+        - similar to python, .py and .pyc
+
+Caching:
+    - .html, MySQL, Query Cache
+    - Craigslist, throws back an .html page
+        - advantage: if storing .html, dont have to regenerate it everytime. 
+        - disadvantage: changing aesthetics of the page is now non-trivial, requiring changes among 10s of thousands of files, so a massive find and replace/regeneration of those pages
+            - redundancies exist, every page has the same tag
+            - better performance over disk space
+
+- MySQL Query Cache
+    - 
+
 
 # Scalability for Dummies: Notes
 ## Clones
