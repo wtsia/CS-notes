@@ -16,6 +16,51 @@
 
 #### [Nash Equilibrium](otherTopics/economics/Nash-Equilibrium.md)
 
+## Broad Notes
+
+### Data Structures and Algorithmns
+
+#### Algorithm efficiency: Big O notation
+Ranked closeness from Elements to Operations (Also good to bad)
+- O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n), O(n!)
+
+- Space complexity: relationship between growth of input size and growth of space needed
+
+- Binary Search ()
+    - Check middle element and search from middle element
+
+- Selection Sort
+    - Linear scan O(n^2)
+- Merge sort: splits collection into subcollections that can be sorted in constant time
+    - merge log(n) sublists
+    - cost of merging 2 sorted lists O(n)
+    - merge sort runs n*log(n) = O(n log(n))
+
+- array: continuous memory space
+- linked list: packed data into nodes that point to another node, null is end of the list
+    - apprending to dynamically sized array costs O(1) average time complexity
+
+- Binary tree
+    - node with no children is called leaf node
+    - Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node's key, while right is greater or equal to the value of parent's (root) node key
+        - O(H) where H is height of the tree, for operations of search, insert, and delete
+        - Red/Black trees: maintain features to accomplish O(log(n))
+    - Heap: A tree based data structure where parent nodes have >= priority as children nodes
+        - Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)
+        - Min heap, max heap
+        - Heap Insertion/Deletion costs O(log(n))
+        - Retrieving highest priority costs O(1)
+        - building heap costs O(n)
+    - Depth First Search: iterates vertically through first branch to the end, then the other leaf nodes
+        - Stack: a collection that supports push (add to end) and pop (remove from end)
+            - Last in First Out
+            - Recursion
+                - if Recursion exceeds amount of depth, you get stack overflow
+    - Breadth First Search: iterates through horizontal branches and progresses downward
+        - Queue: First in First Out
+    - Edges and Verticies
+        - Edges are relationships between verticies
+
 ## Languages Overview
 
 [SOURCE](https://www.computerscience.org/resources/computer-programming-languages/#python)

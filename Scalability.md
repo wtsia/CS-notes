@@ -13,9 +13,9 @@ Running low on ram, increase processing and throw resources at the problem
 
 - More resources means chopping servers into smaller VPS'
 
--SAS: drives spin at over 7200 RPM at 15000 (2012), stores in bits
+- SAS: drives spin at over 7200 RPM at 15000 (2012), stores in bits
 
--SSD: electronic storage
+- SSD: electronic storage
 
 ### Horizontal Scaling:
 Running on many, slower machines instead of one fast machine
@@ -117,7 +117,7 @@ Datacenter 2:
     - LB --> web server, TCP 80
     - LB --> DB, TCP 3306
         - why separate encryptions? You should have **principle of least privledge**, so people cannot query db directly.
-        
+
 Summary: As soon as you have too many users, new problems arise
 
 
