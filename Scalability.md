@@ -41,15 +41,28 @@ Running on many, slower machines instead of one fast machine
     - i.e. user Alice being able to keep sessions in server 1 over and over to be usefu;
 - What if you turn the load balancer into a server that stores sessions? Well what if it dies? What are the redundancies?
     - Instead, we can use RAID, Redundant Array of Independent Disks
-        - 
+        - RAID0,1,...10..
+            - RAID0: typically 2 identical harddrives and 'stripe' data across them by writing alternating across both drives
+            - RAID1: storing a mirrored file in 2 drives simultaneously, one drive can die but the other can still work
+            -RAID10: typically 4 drives and both RAID0-1
+            -RAID5,6: variations, RAID5 can have 3-4-5 drives but only 1 for redundancies. Better economy of scale with redundancies. RAID6: two drives for redundancies
+        - Allows redundancies within a server
+- Sticky Sessions
+    - Shared Storage?
+        - FC, iSCSI, MySQL, NFS, etc
+    - Cookies?
+        - Can store server ID in the cookie and send a user to a server
+            - downside: what if IP changes? No need to show backend IPs
+                - Can store key and have load balancer remember how to decode server id, and takes away ability to spoof cookie
+- Problem: Downtime?
+    - Mitigating risk of file server going down? A: replication
 
+Load Balancers:
+- Software
+    - ELB, HAProxy, LVS, ...
+- Hardware
+    - Barracude, Cisco, Citrix, F5, ...
 
-
-
-
-Shared Web-Host:
-VPS: Virtual Private Servers
--Takes
 
 # Scalability for Dummies: Notes
 ## Clones
