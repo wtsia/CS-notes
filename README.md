@@ -60,6 +60,19 @@ Ranked closeness from Elements to Operations (Also good to bad)
         - Queue: First in First Out
     - Edges and Verticies
         - Edges are relationships between verticies
+        - ex. Google Maps
+            - verticies of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
+                - BFS gives shortest path by verticies, not by weight (length), so use Dijkstra's Algorithm
+    - Dijkstra's algorithm
+    - Topological Sort
+    - Hash Map
+        - Data structure built on top of an array optimized to store key-value pairs
+        - Can retrieve delete and store data in O(1) (but not strictly)
+        - Hash function: takes key and returns hash code
+            - given same key, should return same hash code
+            - ex. dict (python), or object (js)
+        
+        
 
 ## Languages Overview
 
