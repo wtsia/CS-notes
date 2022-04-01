@@ -26,3 +26,18 @@
     - availability: every req receives a response, without guarantee that it contains the most recent version of information
     - Partition Tolerance: The system continues to operate despite arbitrary partitioning due to network failures
     - Networks arent reliable, so support partition tolerance, and tradeoff between consistency and availability 
+        - CP - consistency partition tolerance
+            - good for buisiness requiring atomic reads and writes
+        - AP - availability and partition tolerance
+            - responds with most readily available version of data available on any node (may not be latest)
+            - goof for business needs eventual consistency or continued function despite external errors
+
+### Consistency Patterns
+Now we are faced with options on how to synchronize them so clients have a consistent view of data.
+
+- Weak Consistency: reads may or may not see a write. best effort approach is taken i.e. in systems like memcached. 
+    - use cases in VoIP, Video Chat, Realtime multiplayer games.
+- Eventual consistency: reads will eventually see a write (ms), and data is replicated asynchronously.
+    - useful for DNS, email, high available systems
+- Strong consistency: after write, read will see it, data is replicated synchronously
+    - used in file systems like RDBMSes, or systems that need transactions
