@@ -78,7 +78,7 @@ Caching:
 - MySQL Query Cache
 - Memcached - memory cached
     - stores in RAM
-    -What if you ran out of space on Memcached? What could you do?
+    - What if you ran out of space on Memcached? What could you do?
         - Garbage collection
 
 - MySQL offers Replication features
@@ -118,7 +118,8 @@ Datacenter 2:
     - LB --> DB, TCP 3306
         - why separate encryptions? You should have **principle of least privledge**, so people cannot query db directly.
 
-Summary: As soon as you have too many users, new problems arise
+#### Summary: 
+As soon as you have too many users, new problems arise
 
 
 # Scalability for Dummies: Notes
@@ -131,7 +132,8 @@ Summary: As soon as you have too many users, new problems arise
 
 - When codebases are uniform, you can create an image (Amazon Machine Image for AWS) as a 'super clone' from which to draw from
 
-Summary: updating the codebase uniformly requires access to a central db or persistent cache, using a tool liek Capistrano, then forming a 'super clone' to propogate further.
+#### Summary: 
+updating the codebase uniformly requires access to a central db or persistent cache, using a tool liek Capistrano, then forming a 'super clone' to propogate further.
 
 ## Database
 - Even with horizontal scaling, MySQL leads to slower performance and eventual breakdown.
@@ -146,7 +148,8 @@ DBA will use terms like 'sharding', 'denormalization', and 'SQL tuning'.
 #### Path 2:
 denormalize from the beginning and include no Joins in any db query. Use MySQL as NoSQL if staying, or switch to an easier NoSQL i.e. MongoDB, CouchDB. Joins in app code (sooner the better). Even so, db requests will again be slower and slower and need a cache.
 
-Summary of 2 paths: (1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.
+#### Summary of 2 paths: 
+(1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.
 
 ## Cache
 - Cache means in-memory caches like Memcached or Redis. Never do file-based caching, as it makes cloning and auto-scaling of servers a pain
@@ -155,7 +158,8 @@ Summary of 2 paths: (1) Use MySQL and apply master-slave replication and expandi
 
 - 1st app should retrieve from cache, only then from the data source, since CACHE is fast and holds every dataset in RAM. 
 
-Summary: Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.
+#### Summary: 
+Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.
 
 2 data caching patterns:
 #### Cached Dataase Queries
@@ -164,7 +168,8 @@ Summary: Cacheing is faster, but never do file-based. It is stored as a key-valu
 - Hashed ver. of query is cache key
 - issues: expiration, it is hard to delete cache if it is a complex query, and changing one table cell would require deleting all cached queries including that table cell
 
-Summary: hashed version of query is stored as cache key for the dataset in the cache, but maye have issues with complex queries or changing a table cell.
+#### Summary: 
+hashed version of query is stored as cache key for the dataset in the cache, but maye have issues with complex queries or changing a table cell.
 
 #### Cached Objects
 - Preferable pattern
@@ -183,7 +188,8 @@ Summary: hashed version of query is stored as cache key for the dataset in the c
 - Redis: has extra db features like persistence, built-in data structures i.e. sets and lists
 Memacached: if only caching, and scales easily
 
-Summary: Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynch. Redis is more feature rich in caching. 
+#### Summary: 
+Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynch. Redis is more feature rich in caching. 
 
 ## Asynchronism
 - Imagine buying bread and being told to wait for 2 hours before it's ready--asynch avoids this
@@ -197,7 +203,8 @@ Summary: Cached Objects is the preferred pattern, where the class stores complet
 - Pre-computing makes websites and apps performant and scalable
 - Imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network!
 
-Summary: Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.
+##### Summary: 
+Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.
 
 #### Async #2
 What if there is something that can't be pre-loaded, or a query that is custom?
@@ -207,4 +214,5 @@ What if there is something that can't be pre-loaded, or a query that is custom?
 - Have a queue of tasks for worksers
 - Time consuming? do it asynchronously
 
-Summary: Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list
+#### Summary: 
+Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list
