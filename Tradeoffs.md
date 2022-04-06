@@ -69,3 +69,4 @@ Weak, Eventual, and Strong differ by how accurately a write will be able to be b
     - master-slave, master-master
 - Availability in numbers - quantified by uptime/downtime as a % of time service is available
     - measured in units of 9s, 99.99% availabilty is 4 9s
+        - f(x) = t * a
