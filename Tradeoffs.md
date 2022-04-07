@@ -72,5 +72,5 @@ Weak, Eventual, and Strong differ by how accurately a write will be able to be b
         - { 9, 99, 999, ...}
             = { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), ...}
         - for n > 0, n 9s is represented by 9(10^n + 10^n-1 + ... + 10^0)
-- Availability in parallele vs in sequence
+- Availability in parallel vs in sequence
     - 
