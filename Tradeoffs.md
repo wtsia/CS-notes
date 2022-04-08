@@ -73,4 +73,13 @@ Weak, Eventual, and Strong differ by how accurately a write will be able to be b
             = { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), ...}
         - for n > 0, n 9s is represented by 9(10^n + 10^n-1 + ... + 10^0)
 - Availability in parallel vs in sequence
-    - 
+    - a service depending on multiple components prone to failure has availability dependent on in sequence or in parallel
+    - In Sequence
+        - availability decreases when:
+        `Availability (Total) = Availability (Foo) * Availability (Bar)`
+    - In parallel
+        - availability decreases when: 
+        `Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))`
+
+### Domain Name System (DNS)
+
