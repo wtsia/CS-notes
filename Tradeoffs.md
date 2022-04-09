@@ -82,4 +82,9 @@ Weak, Eventual, and Strong differ by how accurately a write will be able to be b
         `Availability (Total) = 1 - (1 - Availability (Foo)) * (1 - Availability (Bar))`
 
 ### Domain Name System (DNS)
-
+- work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.
+    - NS record (name server) - Specifies the DNS server for domain/subdomain
+    - MX record (mail exchange) - specifies the mail servers for accepting messages
+    - A Record (address) - Points a name to an IP address.
+    - CNAME (canonical) - Points a name to another name or CNAME or to an A record.
+- CloudFlare and Route53 provide managed DNS services.

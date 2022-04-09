@@ -216,3 +216,52 @@ What if there is something that can't be pre-loaded, or a query that is custom?
 
 #### Summary: 
 Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list
+
+# Google I/O 2009 - Transactions Across Datacenters..
+
+### Context
+- multihoming: operating from multiple datacenters simultaneously
+- read/write data
+
+#### Weak Consistency
+- after write, reads may or may not see it
+- best effort, "message in a bottle"
+- App Engine: memcache
+- VoIP, online video
+
+#### Eventual Consistency
+- better than weak, after write, reads eventually see it
+- App Engine: mail
+- Search engine indexing
+- DNS, SMTP, snail mail
+- Amazon S3, SimpleDB
+
+#### Strong Consistency
+- after write, guaranteed reads see it
+- App Engine: datastore
+- Filsystems
+- RDBMSes
+- Azure tables
+
+#### Why Transactions?
+- You will want to build redundancies and make sure transactions are: 
+    - Correct
+    - Consistent
+    - Enforce invariants
+    - ACID (Atomic, consistent, isolated, durable)
+
+#### Across Datacenters
+Pros:
+- If you have failures (catastrophic, expected, maintenance), you will want a redundancy, or uptime during maintenance, or even geolocality (CDNs, edge caching)
+
+Cons:
+- One datacenter is high bandwidth, low latency, little to no networking cost
+- low bandwidth and high latency between datacenters
+
+#### Multihoming
+- Hard problem. Consistently? Harder. Real time? Hardest
+    - Option 1: dont do multihoming. 
+        - Bunkerize: most common, bring 5 sources of redundant power, several backbone connectivity, Microsoft Azure (tables) or Amazon SimpleDB
+        - Catastrophic failure weakness
+        - not geolocated
+
