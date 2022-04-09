@@ -296,5 +296,12 @@ Cons:
 ##### Backups
 - Make a copy, sledgehammer, weak consistency, no transactions, datastore
 
-##### 
+##### Master/Slave Replication
+- Usually Asynchronous
+    - good for throughput, latency
+- Most RDBMSes
+    - e.g. MySQL binary logs
+- Weak/Eventual consistency
+    - Granularity matters
+- Datastore: current
 
