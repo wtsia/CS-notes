@@ -285,12 +285,12 @@ Cons:
 
 | ---| Backups | M/S | M/M | 2PC | Paxos |
 | --- | --- | --- | --- | --- | --- |
-| Consistency | Weak |  |  |  |  |
-| Transactions | No |  |  |  |  |
-| Latency | Low |  |  |  |  |
-| Throughput | High |  |  |  |  |
-| Data Loss | Lots |  |  |  |  |
-| Failover | Down |  |  |  |  |
+| Consistency | Weak | Eventual | Eventual | Strong |  |
+| Transactions | No | Full | Local | Full |  |
+| Latency | Low | Low | Low | High |  |
+| Throughput | High | High | High | Low |  |
+| Data Loss | Lots | Some | Some | None |  |
+| Failover | Down | Read-Only | Read/Write | Read/Write |  |
 
 
 ##### Backups
@@ -305,3 +305,27 @@ Cons:
     - Granularity matters
 - Datastore: current
 
+###### Master/Master Replication
+- Umbrella term for merging concurrent writes
+- Asynchronous, eventual consistency
+- Need Serialization protocol
+    - timestamp oracle: monotonically increasing timestamps
+    - SPOF with master election
+    - distributed consensus protocol
+- No global transactions
+- Datastore: no strong consistency
+
+##### 2PC, Two Phase Commit
+- Semi-destributed consensus protocol
+    - deterministic coordinator
+- 1: propose, 2: vote, 3: commit/abort
+- heavyweight, syncronous, high latency
+- 3PC buys async with extra round trip
+- Datastore poor throughput
+
+##### Paxos
+- Fully distributed consensus protocol
+- Either paxos, or Paxos with cruft, or broken (Mike Burrows)
+- Majority writes; survives minority failure
+- Protocol similar to 2PC/3PC
+    - lighter but still high latency
