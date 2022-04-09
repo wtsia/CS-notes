@@ -264,4 +264,37 @@ Cons:
         - Bunkerize: most common, bring 5 sources of redundant power, several backbone connectivity, Microsoft Azure (tables) or Amazon SimpleDB
         - Catastrophic failure weakness
         - not geolocated
+    - Option 2: Primary with hot failover
+        - similar to master/slave
+        - better but not ideal
+            - mediocre catastrophic failure
+            - Window of lost data
+            - inconsistent failover
+        - Amazon Web Services
+            - EC2, S3, SQS: US/EU
+            - EC2: Availability Zones, Elastic Load Balancing
+        - Banks, brokerages, etc
+        - Geolocated for reads, but not writes
+    - Option 3: True Multihoming
+        - Serving different DCs (read and writes)
+        - Two-way: hard
+        - N-wayL harder
+        - Handle catastrophic failure, geolocality, but pay in latency
+
+#### Techniques and Tradeoffs
+
+  | Backups | M/S | M/M | 2PC | Paxos
+---|---|---|---|---|---
+Consistency | Weak |  |  |  |  |
+Transactions | No |  |  |  |  |
+Latency | Low |  |  |  |  |
+Throughput | High |  |  |  |  |
+Data Loss | Lots |  |  |  |  |
+Failover | Down |  |  |  |  |
+
+
+##### Backups
+- Make a copy, sledgehammer, weak consistency, no transactions, datastore
+
+##### 
 
