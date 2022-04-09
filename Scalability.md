@@ -283,14 +283,14 @@ Cons:
 
 #### Techniques and Tradeoffs
 
-  | Backups | M/S | M/M | 2PC | Paxos
----|---|---|---|---|---
-Consistency | Weak |  |  |  |  |
-Transactions | No |  |  |  |  |
-Latency | Low |  |  |  |  |
-Throughput | High |  |  |  |  |
-Data Loss | Lots |  |  |  |  |
-Failover | Down |  |  |  |  |
+| ---| Backups | M/S | M/M | 2PC | Paxos |
+| --- | --- | --- | --- | --- | --- |
+| Consistency | Weak |  |  |  |  |
+| Transactions | No |  |  |  |  |
+| Latency | Low |  |  |  |  |
+| Throughput | High |  |  |  |  |
+| Data Loss | Lots |  |  |  |  |
+| Failover | Down |  |  |  |  |
 
 
 ##### Backups
