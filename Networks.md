@@ -16,5 +16,10 @@
         - steps to use:
             - create latency records for resources in multiple regions
             - when Route 53 receives a DNS query for your domain/sub, then selects a latency record for that region. A response is given in the form of a value from the selected record i.e. IP address or a web server
-            
+        - example:
+            - Suppose ELB load balancers in US West (Oregon) Region and in the Asia Pacific Region (Singapore). Example of when London enters name of your domain in the browser:
+                - DNS routes query to Route 53 name server
+                - Router 53 refers to its data on latency between London and Singapore and between London and Oregon region
+                - If Latency is lover btwn London & Oregon regions, Route 53 gives query an IP for Oregon LB. If latency is lower between London and the Singapore region, R53 responds with IP for the singapore LB.
+        
     - Geolocation-based

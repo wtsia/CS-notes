@@ -1,6 +1,8 @@
 # Scalability: A Summary
 ![CS75 (Summer 2012) Lecture 9 Scalability Harvard Web Development David Malan](https://www.youtube.com/watch?v=-W9F__D3oY4)
 
+![Scalability Slides](https://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+
 Qualities to look for in a hosting website: SFTP, caution of 'unlimited' offers
 
 VPS: Virtual Private Server (Like AWS), A virtual private server is a virtual machine sold as a service by an Internet hosting service
