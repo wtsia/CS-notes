@@ -285,12 +285,12 @@ Cons:
 
 | ---| Backups | M/S | M/M | 2PC | Paxos |
 | --- | --- | --- | --- | --- | --- |
-| Consistency | Weak | Eventual | Eventual | Strong |  |
-| Transactions | No | Full | Local | Full |  |
-| Latency | Low | Low | Low | High |  |
-| Throughput | High | High | High | Low |  |
-| Data Loss | Lots | Some | Some | None |  |
-| Failover | Down | Read-Only | Read/Write | Read/Write |  |
+| Consistency | Weak | Eventual | Eventual | Strong | Strong |
+| Transactions | No | Full | Local | Full | Full |
+| Latency | Low | Low | Low | High | High |
+| Throughput | High | High | High | Low | Medium |
+| Data Loss | Lots | Some | Some | None | None |
+| Failover | Down | Read-Only | Read/Write | Read/Write | Read/Write |
 
 
 ##### Backups
