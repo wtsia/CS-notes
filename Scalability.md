@@ -331,3 +331,6 @@ Cons:
 - Majority writes; survives minority failure
 - Protocol similar to 2PC/3PC
     - lighter but still high latency
+
+### Slides Notes
+- BASE: Basically Available Soft state Eventually consistent
