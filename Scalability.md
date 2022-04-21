@@ -317,6 +317,10 @@ Cons:
 - No global transactions
 - Datastore: no strong consistency
 
+###### Tree Replication
+
+###### Buddy Replication
+
 ##### 2PC, Two Phase Commit
 - Semi-destributed consensus protocol
     - deterministic coordinator
