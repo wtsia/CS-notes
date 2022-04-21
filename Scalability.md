@@ -318,8 +318,11 @@ Cons:
 - Datastore: no strong consistency
 
 ###### Tree Replication
+- Creates slaves, and one slave/master. Said slave/master creates replicated slaves
 
 ###### Buddy Replication
+- Replicates to each corresponding node, where a backup is kept of another Node/Data, Node A Data A Backup E --> Node B Data B Backup A --> ... --> Node E Data E Backup D --> Backup E
+- upon failure of one, the backup responsibility and data is pushed to the node following the failed server, and the backup of the failed server is kept in the server following the followed server.
 
 ##### 2PC, Two Phase Commit
 - Semi-destributed consensus protocol
@@ -338,3 +341,21 @@ Cons:
 
 ### Slides Notes
 - BASE: Basically Available Soft state Eventually consistent
+- Scalability Patterns: State
+    - Partitioning
+    - HTTP Caching
+        - Reverse Proxy
+            - Varnish, Squid, rack-cache, Pound Nginx, Apache mod_proxy, Traffic Server
+    - RDBMS (Relational Databases) Sharding
+        - Scale via Partitioning, Replication
+            - Partitioning: Application --> User --> Load Balancer --> Servers (A-C, D-F, ...)
+            - Replication: Same, but Servers are (A-C; D-F), (D-F, A-C)
+        - ORM + rich domain model (anti-pattern)
+            - Attempt: read an object, Result: Sit with whole DB on lap.
+        - Scaling reads is hard, Scaling writes is impossible
+        - Needed sometimes but often not
+    - NOSQL (Not only SQL)
+        - Key Value databases, Column DB, Doc DB, Graph DB, Datastructure DB. 
+    - Dist. Caching
+    - Data Grids
+    - Concurrency

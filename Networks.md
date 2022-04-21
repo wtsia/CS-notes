@@ -39,4 +39,11 @@
         - ![link](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
         - Summary: A record of locations (and default) are made to which DNS queries will be sent to nearest mapped geographies
+
+- Disadvantages of DNS
+    - Accessing introduces slight delay but mitigated by caching
+    - Can be complex and is generally managed by governments, ISPs, and large companies.
+    - Go under DDoS attacks
+
+### Content Delivery Network
     
