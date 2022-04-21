@@ -2,6 +2,16 @@
 
 ## Topics:
 
+MIT 6.046J Design and Analysis of Algorithms, Spring 2015 ![here](http://ocw.mit.edu/6-046JS15)
+
+### [MIT 6.046J Subtopic Overview:](DesignAndAnalysisOfAlgorithms.md)
+- Divide and Conquer
+- Optimization: Greedy, Dynamic programming
+- Network Flow
+- Intractibility -- approximation
+- Distributed Algorithmns Plan
+- Cryptography
+
 #### [P vs NP](PvsNP.md)
 
 #### [Divide And Conquer](DivideAndConquer.md)
