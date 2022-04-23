@@ -356,6 +356,7 @@ Cons:
         - Needed sometimes but often not
     - NOSQL (Not only SQL)
         - Key Value databases, Column DB, Doc DB, Graph DB, Datastructure DB. 
+            - i.e. Google: Bigtable, Amazon: Dynamo, SimpleDB, Facebook: Cassandra, Linkedin: Voldemort 
     - Dist. Caching
     - Data Grids
     - Concurrency

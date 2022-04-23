@@ -12,3 +12,12 @@
     - Greedy Interval Scheduling: use a simple rule to request i, reject incompatible to i, and repeat until process is done
         - min(s(i))? longest early segment... bad
         - min(f(i) - s(i))? smallest segment.. bad
+- Claim 1: Greedy algo outputs a list of intervals <s(i_1), f(i_1)>, ... s.t. s(i_1), f(i_1), ...
+    - Proof: by contradiction. if finish of 'j' is greater than start if 'j+1', it contradicts step 2 of algo.
+- Claim 2: Given list of intervals L, greedy algorithm with earliest finish time produces k* intervals where k* is optimal
+    - Proof: Induction on k*. k*=1, then inductive step for k* + 1 intervals. By construction we know f(i_1) <= f(j_1) since algo picks earliest finish time. Construct schedule S** = <s(i_1), f(i_1)>, ...
+
+### Weighted Interval Scheduling
+- Each request i has weight w(i). Schedule subset of requests that are non-overlapping
+with maximum weight.
+    - A key observation here is that the greedy algorithm no longer works.
