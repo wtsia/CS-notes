@@ -24,7 +24,13 @@
 - Claim 1: Greedy algo outputs a list of intervals <s(i_1), f(i_1)>, ... s.t. s(i_1) < f(i_1) <= s(i_2) ...
     - Proof: by contradiction. if finish of 'j' is greater than start if 'j+1', it contradicts step 2 of algo.
 - Claim 2: Given list of intervals L, greedy algorithm with earliest finish time produces k* intervals where k* is optimal
-    - Proof: Induction on k*. k*=1, then inductive step for k* + 1 intervals. By construction we know f(i_1) <= f(j_1) since algo picks earliest finish time. Construct schedule S** = <s(i_1), f(i_1)>, ...
+    - Proof: Induction on k*. k*=1, then suppose it holds true for k*, apply inductive step for k* + 1 intervals.
+        S*[1, 2, ..., k* + 1] = <s(j_1), f(j_1)>, ..., <s(j_(k*+1)), f(j_(k*+1))>
+    Say for some generic k, 
+        S[1, 2, ..., k] = <s(i_1), f(i_1)>, ..., <s(i_k), f(i_k)> 
+    By construction we know f(i_1) <= f(j_1) since algo picks earliest finish time. Construct schedule 
+        S** = <s(i_1), f(i_1)>, <s(j_1), f(j_1)>, ..., <s(j_k*+1), f(j_k*+1)>
+    Then S** is optimal due to being length k* + 1. Define L' s.t. s(i) >= f(i_1). Since S** is optimal for L, S**[2, 3, ..., k* + 1] is optimal for L', implying optimal schedule for L' has k* size. Hence, k - 1 = k*, implying S[1, ..., k] is optimal.
 
 ### Weighted Interval Scheduling
 - Each request i has weight w(i). Schedule subset of requests that are non-overlapping
