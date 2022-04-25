@@ -71,12 +71,29 @@ O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n), O(n!)
         - if Recursion exceeds amount of depth, you get stack overflow
 ##### Breadth First Search: iterates through horizontal branches and progresses downward
 - Queue: First in First Out
-##### Edges and Verticies
-- Edges are relationships between verticies
+##### Edges and Vertices
+- Edges are relationships between vertices
 - ex. Google Maps
-    - verticies of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
-        - BFS gives shortest path by verticies, not by weight (length), so use Dijkstra's Algorithm
+    - vertices of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
+        - BFS gives shortest path by vertices, not by weight (length), so use Dijkstra's Algorithm
 ##### Dijkstra's Algorithm
+- ![Computerphile - Dijikstra's Algorithm](https://www.youtube.com/watch?v=GazC3A4OQTE)
+- A path-finding algorithm, useful for routing
+- Analogy: Roads
+    - Smaller = better
+    - How do you find a route from point A to B? (S to E)
+    - How do you know this route is the shortest path?
+- Analogous to brute-forcing, storing paths in priority queue where shortest path to a specific node is pushed up a queue
+    
+    1. let initial node be 0, and distance of unvisited nodes in some unvisited set be infinity
+    2. tentative distance is length of the shortest path discovered so far between generic node and starting node
+        - set initial node as current
+    3. On current node, visit unvisited neighboring nodes to current and calculate tentative distance through current.
+        - assign smallest tentative distance to currently assigned value for current
+    4. after considering unvisited nodes, mark current nodes, remove from unvisited set
+    5. if destination has been visited, or smallest tentative distance among unvisited nodes is infinity, return finished.
+    6. else select unvisited node that is marked with smallest tentative distance and set it as new current node, return to step 3.
+
 ##### Topological Sort
 ##### Hash Map
 - Data structure built on top of an array optimized to store key-value pairs
