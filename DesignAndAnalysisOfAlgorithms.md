@@ -4,7 +4,7 @@
 ` P vs NP: class of problems solvable in polynomial time O(n^k) vs non-deterministic polynomial time, which is verifiable in poly. time.
 ` Claims:
     1. Greedy algorithm produces a list of intervals s.t. starts and finishes are chronological
-    2. Given a list of Intervals L, greedy algorithmn with earliest finish time produces k* intervals where k* is maximum
+    2. Given a list of Intervals L, greedy algorithms with earliest finish time produces k* intervals where k* is maximum
     - Conclusion: earliest finish time is mathematically the most optimal algorithm
 
 ## 1. Course Overview, Interval Scheduling
@@ -12,7 +12,7 @@
 ### Theme of Lecture:
 - similar problems can have different complexity
 - P: class of problems solvable in polynomial time O(n^k) for some constant k. 
-    - Shortest-path: O(v^2), for v = verticies in graph
+    - Shortest-path: O(v^2), for v = vertices in graph
 - NP: Non-deterministic polynomial time. Class of probs. solution is verifiable in polynomial time.
     - Hamiltonian cycle: given a directed graph, find a simple cycle that contain each vertex in V
 - NP-complete: problem is in NP and is as hard as any problem in NP. 
@@ -33,6 +33,5 @@
     Then S** is optimal due to being length k* + 1. Define L' s.t. s(i) >= f(i_1). Since S** is optimal for L, S**[2, 3, ..., k* + 1] is optimal for L', implying optimal schedule for L' has k* size. Hence, k - 1 = k*, implying S[1, ..., k] is optimal.
 
 ### Weighted Interval Scheduling
-- Each request i has weight w(i). Schedule subset of requests that are non-overlapping
-with maximum weight.
+- Each request i has weight w(i). Schedule subset of requests that are non-overlapping with maximum weight.
     - A key observation here is that the greedy algorithm no longer works.
