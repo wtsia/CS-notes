@@ -46,4 +46,29 @@
     - Go under DDoS attacks
 
 ### Content Delivery Network
+- CDN is a globally distributed network of proxy servers, serving content from locations closer to the user i.e. static files like HTML, CSS, JS, photos, or videos
+- Pros:
+    - Users may receive content from data centers close to them
+    - Servers do not have to serve requests CDN fulfills
+
+#### Push CDNs
+- receive new content when changes occur on server
+- Provider managed, uploading and rewriting URLs to point to CDN, expiration, and update frequency. 
+- Content uploading when new or changed minimizing traffic but maximizing storage
+- Push is good for sites whose content isn't often updated 
+
+#### Pull CDNs
+- grabs new content from server when the first user requests content.
+    - leave content on server and rewrite URLs to point to CDN
+        - results in slow request until content is cached on CDN
+    - time to live (TTL) determines caching duration.
+- minimizes storage space on CDN but can create redundant traffic if files expire and are pulled before changes.
+
+#### Disadvantages of CDNs:
+- CDN costs may be significant dependent on traffic,but should be analyzed by opportunity cost. 
+- Content may be stale if updated before TTL expires it
+- CDNs require chaning URLs for statuc content to point to the CDN
+
+
+
     
