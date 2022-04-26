@@ -18,17 +18,14 @@ MIT 6.046J Design and Analysis of Algorithms, Spring 2015 ![here](http://ocw.mit
 
 ### System Design:
 #### [Scalability](Scalability.md)
-
-## Other Topics:
-### Math 
-
-### Economics
-
-#### [Nash Equilibrium](otherTopics/economics/Nash-Equilibrium.md)
+#### [Networking](Networks.md)
 
 ## Broad Notes
 
 ### Data Structures and Algorithms
+
+#### Dynamic Programming & Memoization
+- fib(n)
 
 #### Algorithm efficiency: Big O notation
 Ranked closeness from Elements to Operations (Also good to bad)
@@ -101,3 +98,10 @@ O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n), O(n!)
 - Hash function: takes key and returns hash code
     - given same key, should return same hash code
     - ex. dict (python), or object (js)
+
+## Other Topics:
+### Math 
+
+### Economics
+
+#### [Nash Equilibrium](otherTopics/economics/Nash-Equilibrium.md)
