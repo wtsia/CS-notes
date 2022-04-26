@@ -25,6 +25,10 @@ MIT 6.046J Design and Analysis of Algorithms, Spring 2015 ![here](http://ocw.mit
 ### Data Structures and Algorithms
 
 #### Dynamic Programming & Memoization
+A way of making algorithms more efficient by storing the intermediary results.
+- Memoization: In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
+
+Examples: 
 - fib(n)
 
 #### Algorithm efficiency: Big O notation
