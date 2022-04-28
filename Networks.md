@@ -69,9 +69,6 @@
 - Content may be stale if updated before TTL expires it
 - CDNs require changing URLs for static content to point to the CDN
 
-### Load balancer
-- Distribute client requests to computing resources, i.e. app servers and db. Each case, LB returns response from computing resource to appropriate client.
-- effective usage: prevent directing to unhealthy servers, preventing overloading, eliminating single points of failure.
 
 
     
