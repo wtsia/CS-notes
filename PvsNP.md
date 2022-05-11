@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "P vs NP"
+description = "P, NP, and NP-completeness"
+tags = [
+    "Concept"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 # Understanding P vs NP, and NP-completeness
 
 ### Introduction

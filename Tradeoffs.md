@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Scalability: Tradeoffs"
+description = "Scalability topics covering tradoffs"
+tags = [
+    "Tradeoffs"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 # Performance vs Scalability
 - Scalable: if performance is proportional to resources added
 - can be serving more units or larger units

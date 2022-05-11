@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Scalability"
+description = "Topics covering scalability of systems"
+tags = [
+    "Scalability"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 # Scalability: A Summary
 ![CS75 (Summer 2012) Lecture 9 Scalability Harvard Web Development David Malan](https://www.youtube.com/watch?v=-W9F__D3oY4)
 
@@ -25,7 +44,7 @@ Running on many, slower machines instead of one fast machine
 
 #### Load Balancing:
 - distributes traffic from clients among servers
-- What IP address should we return when a clien enters a website address
+- What IP address should we return when a client enters a website address
     - can return via the load balancer instead of DNS returning server #
 - Private IPs are localized and not seen by the public 
 

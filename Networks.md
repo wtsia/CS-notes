@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Networks"
+description = "Scaling Networks"
+tags = [
+    "Scalability"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 ### Domain Name System (DNS)
 - work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.
     - NS record (name server) - Specifies the DNS server for domain/subdomain

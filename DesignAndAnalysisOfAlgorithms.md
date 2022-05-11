@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Design and Analysis of Algorithms"
+description = "MIT 6.046J 2015"
+tags = [
+    "Algorithms"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 # Design and Analysis of Algorithms, MIT 6.046J 2015 
 ## Notes Summary
 ##### 1. Course Overview, Interval Scheduling

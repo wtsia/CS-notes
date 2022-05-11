@@ -1,3 +1,22 @@
++++
+author = "Winston Tsia"
+authorlink = ""
+title = "Languages Overview"
+description = "Covers major languages used in the Software industry"
+tags = [
+    "Languages"
+]
+categories = [
+    "Computer Science"
+]
+math = true
+notaxonomy = false
+hidden = true
+norobots = true
+nodate = true
+hidemeta = true
++++
+
 ## Languages Overview
 
 [SOURCE](https://www.computerscience.org/resources/computer-programming-languages/#python)
